@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3422711409.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+
+        menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            background-color: black;
+        }
+
+        menu li {
+            display: inline;
+            padding: 10px;
+        }
+
+        menu li a {
+            text-decoration: none;
+            color:white;
+            font-size: 20px;
+        }
+        #cart-summary {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        .delete-item {
+            border: none;
+            background: none;
+            color: #ff4d4d;
+        }
+
+        .delete-item:hover {
+            cursor: pointer;
+            color: #ff0000;
+        }
+
+        footer {
+            background-color:black;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <menu>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </menu>
+    </header>
+
+    <div id="cart-summary">
+        <h2>Shopping Cart</h2>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <marquee behavior="scroll" direction="right"><p>&copy; 2024 Taste Of Heaven</p></marquee>
+    </footer>
+
+    <script>
+        if (window.location.pathname.endsWith('cart.html')) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const tableBody = document.querySelector('#cart-table tbody');
+
+            const renderCart = () => {
+                tableBody.innerHTML = '';
+                cart.forEach((item, index) => {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>${item.price}</td>
+                        <td><button class="delete-item" data-index="${index}"><i class="fa-solid fa-trash"></i></button></td>
+                    `;
+                    tableBody.appendChild(newRow);
+                });
+
+                document.querySelectorAll('.delete-item').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const index = e.target.closest('.delete-item').getAttribute('data-index');
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        renderCart();
+                    });
+                });
+            };
+
+            renderCart();
+        }
+    </script>
+</body>
+</html>

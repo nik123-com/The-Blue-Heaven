@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+body {
+    background-color: #f7f8fa;
+    color: #333;
+}
+
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 15px 30px;
+    background-color: #0a2540;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    gap: 20px;
+    z-index: 10;
+}
+
+menu li {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 17px;
+}
+
+menu li a:hover {
+    background-color: aliceblue;
+    color: black;
+    font-weight: bold;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+#home {
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+#middle {
+    position: relative;
+    color: white;
+    left: 0;
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heroimg {
+    display: block;
+    font-size: 25px;
+    height: 395px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 42px;
+    opacity: 0.59;
+    margin: 0 auto;
+    background-image: url('/hero\ image.jpg');
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 5px auto;
+    padding: 20px;
+}
+
+.card, .card1 {
+    width: 300px;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img, .card1 img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.card:hover, .card1:hover {
+    background-color: rgb(234, 242, 249);
+    color: black;
+}
+
+#heading2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0a2540;
+    margin: 0px auto;
+}
+
+.contact-box {
+    background: #e4e9f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 469px;
+    color: #0a2540;
+    margin: 40px auto;
+}
+
+.contact-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+#submit, .btn {
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #0a2540;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#submit:hover, .btn:hover {
+    background-color: yellow;
+    color: #0a2540;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a2540;
+    padding: 20px;
+    color: #fff;
+}
+
+.logo {
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="text"], input[type="tel"], textarea, select {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 34px;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label {
+    position: relative;
+    left: 10px;
+}
+
+select {
+    position: relative;
+    left: 10px;
+    width: fit-content;
+}
+
+.form {
+    display: flex;
+    text-align: center;
+}
+
+#About-container {
+    padding: 20px;
+    text-align: justify;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+#cart {
+    color: white;
+    font-size: 19px;
+    position: relative;
+    left: 277px;
+    top: 3px;
+}
+
+.search {    
+    position: relative;
+    left: 366px;
+}
+
+.search input {
+    border-radius: 34px;
+    padding: 9px;
+    margin: 2px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn1 {
+    border-radius: 34px;
+    padding: 10px;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.btn1:hover {
+    font-weight: bold;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+#cart-summary {
+    margin: 20px auto;
+    width: 80%;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cart-table {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#cart-table th, #cart-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#cart-table th {
+    background: #0a2540;
+    color: white;
+}
+
+#cart-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+.heroimg-text{
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.signin{
+    font-size: 17px;
+    position: relative;
+    left: 277px;
+    color: white;
+}
+.signin a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*Media Queries*/
+/* General adjustments for smaller screens */
+@media (max-width: 1200px) {
+    menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .card-container {
+        gap: 15px;
+    }
+
+    .card, .card1 {
+        width: 250px;
+    }
+
+    #submit, .btn {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .heroimg {
+        height: 300px;
+        font-size: 20px;
+    }
+
+    #middle {
+        font-size: 40px;
+    }
+
+    .card, .card1 {
+        width: 90%;
+    }
+
+    .logo {
+        left: 5px;
+    }
+
+    .search {
+        left: 0;
+        margin-top: 10px;
+    }
+
+    .signin {
+        left: 0;
+        margin-top: 10px;
+    }
+
+    #cart {
+        left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    menu li {
+        margin: 5px 0;
+    }
+
+    #heading2 {
+        font-size: 1.8rem;
+    }
+
+    #cart-summary {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .contact-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    .heroimg {
+        height: 250px;
+        font-size: 16px;
+    }
+
+    .card, .card1 {
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .signin {
+        font-size: 15px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
+/* Default styles */
+menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    menu {
+        display: none; 
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    menu.active {
+        display: flex; 
+        flex-direction: column;
+    }
+}
