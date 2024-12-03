@@ -72,7 +72,7 @@ menu li a:hover {
     bottom: 42px;
     opacity: 0.59;
     margin: 0 auto;
-    background-image: url('/hero\ image.jpg');
+    background-image: url('hero\ image.jpg');
 }
 .card-container {
     display: flex;
